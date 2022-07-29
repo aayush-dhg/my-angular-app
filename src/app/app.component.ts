@@ -1,10 +1,19 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Employee } from './model/employee.model';
+import { EmployeeService } from './service/employee.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-  title = 'my-angular-app';
+export class AppComponent implements OnInit {
+
+  constructor(private employeeService: EmployeeService) {
+  }
+  employees: Employee[];
+
+  ngOnInit(): void { 
+    this.employees = this.employeeService.fetchEmployees();
+  }
 }

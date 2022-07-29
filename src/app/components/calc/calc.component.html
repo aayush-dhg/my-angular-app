@@ -1,0 +1,17 @@
+<p>Calculator</p>
+<div>
+    <h4>
+      <!-- here {{}} calls the class from file.ts-->
+      x = {{x}} <br />
+  
+      y = {{y}} <br />
+      Result is : {{result}}
+    </h4>
+    <button (click)="display()"> Click Me</button>
+  
+    <hr>
+    <button (click)="add()">ADD</button> &nbsp;
+    <button (click)="sub()">SUB</button> &nbsp;
+    <button (click)="mul()">MUL</button> &nbsp;
+    <button (click)="div()">DIV</button> &nbsp;
+</div>

@@ -1,8 +1,18 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { PostComponent } from './components/post/post.component';
+import { CommentsComponent } from './components/comments/comments.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { CategoryComponent } from './components/category/category.component';
 
-const routes: Routes = [];
-
+const routes: Routes = [
+  
+  {path:'dashboard', component: DashboardComponent},
+  {path:'posts', component: PostComponent},
+  {path:'comments/:postId', component: CommentsComponent},
+  {path: 'category', component: CategoryComponent}
+];
+    
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
