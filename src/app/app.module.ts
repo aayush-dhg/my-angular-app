@@ -17,6 +17,10 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { HttpClientModule} from '@angular/common/http';
 import { CategoryComponent } from './components/category/category.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { EmployeeComponent } from './components/employee/employee/employee.component';
+import { EmployeeStatComponent } from './components/employee/employee-stat/employee-stat.component';
+import { EmployeeListComponentRxjs } from './components/employee/employee-list/employee-list.component';
+import { EmployeeAddComponentRxjs } from './components/employee/employee-add/employee-add.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +34,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     PostComponent,
     CommentsComponent,
     DashboardComponent,
-    CategoryComponent
+    CategoryComponent,
+    EmployeeComponent,
+    EmployeeStatComponent,
+    EmployeeAddComponentRxjs,
+    EmployeeListComponentRxjs,
+
   ],
   imports: [
     BrowserModule,

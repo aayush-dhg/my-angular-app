@@ -10,30 +10,33 @@ import { CategoryService } from 'src/app/service/category.service';
 })
 export class CategoryComponent implements OnInit {
 
-  categoryForm : FormGroup;
+  categoryForm :FormGroup;
   message: string;
   constructor(private categoryService: CategoryService) { }
 
   ngOnInit(): void {
     this.message ='';
     this.categoryForm = new FormGroup({
-      name: new FormControl('', [Validators.required, Validators.pattern(/^[a-zA-z ]+$/)]),
-    preference: new FormControl('', [Validators.required, Validators.pattern(/^[0-9]+$/)])
+      name: new FormControl('', [Validators.required,
+          Validators.pattern(/^[a-zA-Z ]+$/)]),
+      preference: new FormControl('', [Validators.required,
+        Validators.pattern(/^[0-9]+$/)])
     });
   }
   onFormSubmit(){
-    let category: Category={
-      name: this.categoryForm.value.name,
-      preference: this.categoryForm.value.preference
-    }
-    this.categoryService.postCategory(category).subscribe({
-      next: (data) => {
-        this.message = 'Category Added Successfully...';
-      },
-      error: (e) => {
-        this.message = 'Couldnot perform operation..';
+      let category: Category={
+        name: this.categoryForm.value.name,
+        preference: this.categoryForm.value.preference
       }
-    });
+      this.categoryService.postCategory(category).subscribe({
+        next: (data) => {
+          this.message='Category added successfully..';
+        },
+        error: (e) => {
+          this.message ='Could not perform operation..'
+        }
+      }
+      );
   }
 
 }
