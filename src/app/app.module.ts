@@ -22,6 +22,7 @@ import { EmployeeStatComponent } from './components/employee/employee-stat/emplo
 import { EmployeeListComponentRxjs } from './components/employee/employee-list/employee-list.component';
 import { EmployeeAddComponentRxjs } from './components/employee/employee-add/employee-add.component';
 import { LoginComponent } from './auth/component/login/login.component';
+import { LogoutComponent } from './auth/component/logout/logout.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import { LoginComponent } from './auth/component/login/login.component';
     EmployeeAddComponentRxjs,
     EmployeeListComponentRxjs,
     LoginComponent,
+    LogoutComponent,
 
   ],
   imports: [
