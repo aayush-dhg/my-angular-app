@@ -4,10 +4,10 @@
     margin: 10px;
   }
   .employee-list{
-    width: 50%;
+    width: 45%;
     float: left;
   }
   .employee-stat-add{
     width: 50%;
-    float:left;
+    float: right;
   }

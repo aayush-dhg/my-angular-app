@@ -5,3 +5,8 @@ export class Employee{
     salary: number;
     department: string;
 }
+
+export class Stat{
+  department: string;
+  count: number;
+}

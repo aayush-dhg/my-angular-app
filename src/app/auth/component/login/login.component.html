@@ -1,0 +1,15 @@
+<h1>Login</h1>
+{{message}}
+<form (submit)="onFormSubmit()" [formGroup]="loginForm">
+    <label>
+        Enter User Name:
+    </label>
+    <input type = "text" formControlName = "name">
+    <br/> <br />
+    <label>
+        Enter Password:
+    </label>
+    <input type = "password" formControlName = "password">
+    <br /> <br />
+    <input type="submit" value="Login" [disabled]="!loginForm.valid">
+</form>
