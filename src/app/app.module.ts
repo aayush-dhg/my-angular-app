@@ -23,6 +23,12 @@ import { EmployeeListComponentRxjs } from './components/employee/employee-list/e
 import { EmployeeAddComponentRxjs } from './components/employee/employee-add/employee-add.component';
 import { LoginComponent } from './auth/component/login/login.component';
 import { LogoutComponent } from './auth/component/logout/logout.component';
+import { SignUpComponent } from './auth/component/sign-up/sign-up.component';
+import { ProfileComponent } from './auth/component/profile/profile.component';
+import { VendorComponent } from './components/vendor/vendor/vendor.component';
+import { VendorListComponent } from './components/vendor/vendor-list/vendor-list.component';
+import { PasswordResetComponent } from './auth/component/password-reset/password-reset.component';
+import { UsernameVerifyComponent } from './auth/component/username-verify/username-verify.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +49,12 @@ import { LogoutComponent } from './auth/component/logout/logout.component';
     EmployeeListComponentRxjs,
     LoginComponent,
     LogoutComponent,
+    SignUpComponent,
+    ProfileComponent,
+    VendorComponent,
+    VendorListComponent,
+    PasswordResetComponent,
+    UsernameVerifyComponent,
 
   ],
   imports: [

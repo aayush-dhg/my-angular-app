@@ -17,27 +17,24 @@
     <a routerLink="/posts">Posts</a> &nbsp;&nbsp;&nbsp;
     <a routerLink="/products">Products</a> &nbsp;&nbsp;&nbsp;
     <a routerLink="/category">Category</a> &nbsp;&nbsp;&nbsp;
+    <a routerLink="/vendor">Vendor</a> &nbsp;&nbsp;&nbsp;
     <a routerLink="/employee">Employee</a> &nbsp;&nbsp;&nbsp;
-    
   </span>
   
   <div class="status">  
+    <!-- Logged in-->
     <span *ngIf="username != ''">
-      Welcome {{username}} &nbsp; &nbsp;&nbsp; &nbsp;
+      Welcome <a routerLink="/profile"> {{username}}</a> &nbsp; &nbsp;&nbsp; &nbsp;
       <a routerLink="/logout">Logout</a>
-      
     </span>
+    <!-- Logged out-->
     <span *ngIf="username == ''">
-      <a routerLink="/login">Login</a>
-
+      <a routerLink="/login">Login</a> &nbsp;&nbsp;&nbsp;
+      <a routerLink="/signup">Sign Up</a> &nbsp;&nbsp;&nbsp;
     </span>
   </div>
-  
   <hr>
-  
-    
   </div>
-  
   <div>
     <router-outlet></router-outlet>
   </div>
